@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนที่การใช้ที่ดิน</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        #LanduseMap {
+            padding: 16px;
+        }
+        .description {
+            background: linear-gradient(135deg, #c5e1a5, #c2e9fb);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+        h5 {
+            color: #0d5302;
+            font-weight: bold;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #5cbe59, #c2e9fb);
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+        .contact, .faq, .about {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .faq-form {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+        .faq-form input, .faq-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .faq-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .faq-form button:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .emblem-section {
+            margin-top: 40px;
+            padding: 16px;
+            background: #f4f4f4;
+            border-radius: 8px;
+        }
+        .emblem-section img {
+            width: 100px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .emblem-section h5 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .emblem-section p {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.4;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบนำทาง -->
+    <div class="navbar">
+        <a href="#LanduseMap">แผนที่การใช้ที่ดิน</a>
+        <a href="#Contact">ติดต่อเรา</a>
+        <a href="#FAQ">ถามคำถาม</a>
+        <a href="#About">เกี่ยวกับเรา</a>
+    </div>
+
+    <div class="w3-row">
+        <div id="LanduseMap" class="w3-third">
+            <h5>แผนที่การใช้ที่ดิน</h5>
+            <img src="icon/LU_MAP.png" style="width:100%" alt="แผนที่การใช้ที่ดิน">
+        </div>
+        <div class="w3-twothird">
+            <div class="description">
+                <h5>คำอธิบายแผนที่</h5>
+                <p>
+                    แผนที่การใช้ที่ดินนี้แสดงให้เห็นภาพรวมของประเภทการใช้ที่ดินที่แตกต่างกันในพื้นที่ โดยเน้นย้ำถึงภาคส่วนต่าง ๆ เช่น ที่ดินเกษตรกรรม การพัฒนาเมือง และพื้นที่อนุรักษ์
+                </p>
+                <p>
+                    การวิเคราะห์แผนที่นี้ช่วยให้ผู้มีส่วนได้ส่วนเสียสามารถระบุพื้นที่ที่มีศักยภาพสำหรับการเติบโต และประเมินผลกระทบต่อสิ่งแวดล้อม
+                </p>
+            </div>
+
+            <div class="description">
+                <h5>การพัฒนาอย่างยั่งยืน</h5>
+                <p>
+                    การใช้ที่ดินอย่างมีประสิทธิภาพไม่เพียงแต่ส่งผลต่อเศรษฐกิจเท่านั้น แต่ยังมีผลต่อสิ่งแวดล้อมและสังคม การพัฒนาอย่างยั่งยืนจึงเป็นแนวทางสำคัญที่ช่วยให้การใช้ที่ดินเกิดผลดีทั้งในระยะสั้นและระยะยาว
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!DOCTYPE html>
+    <html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ตราครุฑและความหมาย</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif; /* เปลี่ยนฟอนต์ */
+                line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+                background: linear-gradient(135deg, #c5e1a5, #c2e9fb);
+                margin: 0;
+                padding: 20px;
+            }
+    
+            .emblem-section {
+                max-width: 800px; /* กำหนดความกว้างสูงสุด */
+                margin: auto; /* จัดกลาง */
+                padding: 20px;
+                background-color: #fff; /* สีพื้นหลังของ container */
+                border-radius: 8px; /* มุมมน */
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงา */
+            }
+    
+            h5 {
+                text-align: center; /* จัดกลางหัวข้อ */
+                color: #333; /* สีของหัวข้อ */
+            }
+    
+            div {
+                margin-bottom: 20px; /* เว้นระยะระหว่างแต่ละกล่อง */
+                padding: 10px;
+                border: 1px solid #ddd; /* เส้นขอบ */
+                border-radius: 5px; /* มุมมน */
+                background-color: #fafafa; /* สีพื้นหลังของแต่ละกล่อง */
+            }
+    
+            img {
+                width: 100%; /* ขยายภาพให้เต็มความกว้างของ container */
+                height: auto; /* ปรับความสูงตามสัดส่วน */
+                border-radius: 5px; /* มุมมนสำหรับภาพ */
+                margin-bottom: 10px; /* เว้นระยะระหว่างภาพและข้อความ */
+            }
+    
+            strong {
+                color: #d9534f; /* สีของข้อความที่เน้น */
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="emblem-section">
+        <h5>ตราครุฑและความหมาย</h5>
+    
+        <div>
+            <img src="icon/ครุฑ-แดง.png" alt="ตราครุฑสีแดง">
+            <p><strong>ตราครุฑสีแดง:</strong> โฉนดที่ดินครุฑแดงเป็นเอกสารที่เจ้าของมีกรรมสิทธิ์ 100% สามารถซื้อขาย โอน หรือจำนองได้อย่างเต็มที่ เจ้าของมีสิทธิ์ใช้ที่ดินเพื่อการอยู่อาศัย ทำกิน หรือกิจกรรมอื่น ๆ อย่างเต็มที่ สิทธิ์จะหมดลงหากถูกครอบครองปรปักษ์ต่อเนื่อง 10 ปี และสามารถใช้เป็นหลักทรัพย์ในการยื่นขอสินเชื่อได้</p>
+        </div>
+    
+        <div>
+            <img src="icon/ครุฑเขียว.webp" alt="ตราครุฑสีเขียว">
+            <p><strong>ตราครุฑสีเขียว:</strong> ครุฑสีเขียวเป็นหนังสือรับรองการทำประโยชน์ ยังไม่ใช่โฉนดที่ดิน ทำให้ยังไม่เป็นกรรมสิทธิ์เท่าคนถือโฉนดครุฑแดง แต่ทว่าคุณสมบัติใกล้เคียงกับโฉนด ซื้อ ขาย จำนองธนาคารได้ ถูกต้องตามกฎหมาย แต่สิทธิ์ของที่ดินจะหมดลงหากถูกครองครองปรปักษ์ติดต่อกัน 1 ปี แต่ในอนาคตสามารถยื่นเรื่องเปลี่ยนเป็นโฉนดครุฑแดงได้ที่สำนักงานที่ดินจังหวัด</p>
+        </div>
+    
+        <div>
+            <img src="icon/น้ำเงิน.png" alt="ตราครุฑสีน้ำเงิน">
+            <p><strong>ตราครุฑสีน้ำเงิน:</strong> ครุฑสีน้ำเงิน หรือ ส.ป.ก.4-01 เป็นเอกสารที่ดินที่อนุญาตให้ทำการเกษตรเท่านั้น โดยจะออกให้เกษตรกรครอบครัวละไม่เกิน 50 ไร่ มีข้อห้ามไม่ให้ซื้อขาย โอน หรือให้เช่าที่ดิน เจ้าของที่ดินต้องใช้ประโยชน์จากที่ดินด้วยตนเอง และสามารถสร้างบ้านได้ ที่ดินนี้สามารถตกทอดเป็นมรดกให้กับทายาทที่เป็นเกษตรกรเท่านั้น</p>
+        </div>
+    
+        <div>
+            <img src="icon/ครุฑดำ.jpg" alt="ตราครุฑสีดำ">
+            <p><strong>ตราครุฑสีดำ:</strong> ครุฑสีดำเป็นหนังสือรับรองสิทธิ์การครอบครองที่ดิน แต่การครอบครองยังไม่เป็นทางการ ขนาดที่ดินไม่ชัดเจน หากต้องการซื้อขาย โอน หรือจำนอง จะต้องรังวัดที่ดินและรอประกาศจากราชการ 30 วัน ผู้ถือครุฑดำสามารถยื่นเรื่องเปลี่ยนเป็นโฉนดที่ดินได้ ครุฑดำมี 2 ประเภทคือ ครุฑดำ น.ส. 3 ซึ่งออกโดยนายอำเภอ และครุฑดำ น.ส. 3 ข. ซึ่งออกโดยเจ้าหน้าที่ที่ดิน สิทธิ์ของที่ดินครุฑดำจะหมดลงหากถูกครอบครองปรปักษ์ติดต่อกัน 1 ปี</p>
+        </div>
+    </div>
+    
+    </body>
+    </html>
+    
+
+    <!-- เกี่ยวกับเรา -->
+    <div class="about">
+        <h5 id="About">เกี่ยวกับเรา</h5>
+        <p>
+            เราคือทีมงานที่มุ่งมั่นในการสร้างความเข้าใจเกี่ยวกับการใช้ที่ดินและการพัฒนาที่ยั่งยืนในภูเก็ต เรามีเป้าหมายในการให้ข้อมูลและเครื่องมือที่จำเป็นเพื่อช่วยให้ผู้มีส่วนได้ส่วนเสียสามารถตัดสินใจอย่างมีข้อมูล
+        </p>
+        <p>
+            ด้วยการทำงานร่วมกับชุมชนและผู้เชี่ยวชาญ เรามุ่งหวังที่จะสนับสนุนการพัฒนาที่ตอบสนองความต้องการของชุมชนในระยะยาว
+        </p>
+    </div>
+
+    <!-- ข้อมูลติดต่อ -->
+    <div class="contact">
+        <h5 id="Contact">ติดต่อเรา</h5>
+        <p>สำหรับข้อมูลเพิ่มเติมหรือคำถาม กรุณาติดต่อ:</p>
+        <p>โทรศัพท์: 061-537-3063</p>
+        <p>อีเมล: s6530212004@phuket.psu.ac.th</p>
+        <p>ที่อยู่: 123 ม.1 ต.วิชิต อ.เมืองภูเก็ต จ.ภูเก็ต 83000</p>
+    </div>
+
+    <!-- ฟอร์มคำถาม -->
+    <div class="faq">
+        <h5 id="FAQ">ถามคำถามของคุณ</h5>
+        <div class="faq-form">
+            <p>กรุณากรอกคำถามของคุณด้านล่าง:</p>
+            <input type="text" placeholder="ชื่อของคุณ" required>
+            <textarea rows="4" placeholder="คำถามของคุณ" required></textarea>
+            <button type="submit">ส่งคำถาม</button>
+        </div>
+    </div>
+
+    
+
+    <!-- การรับรองหรือความคิดเห็น -->
+    <div class="description">
+        <h5>ความคิดเห็นจากผู้ใช้</h5>
+        <p>"ข้อมูลที่มีอยู่ในเว็บไซต์นี้ช่วยให้เราเข้าใจการใช้ที่ดินในภูเก็ตได้ดีขึ้นและช่วยในการวางแผนที่ดีขึ้นสำหรับอนาคต" - ผู้ใช้บริการ</p>
+    </div>
+
+</body>
+</html>

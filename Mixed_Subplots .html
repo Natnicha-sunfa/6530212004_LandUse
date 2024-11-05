@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การขยายตัวของพื้นที่เมืองในจังหวัดภูเก็ต</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* จัดให้อยู่กลางในแนวนอน */
+            height: 100vh; /* ความสูงเต็มหน้าจอ */
+            background: linear-gradient(135deg, #c5e1a5, #c2e9fb);
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #0d5302;
+            margin-top: 20px;
+            font-size: 28px; /* ขยายขนาดตัวอักษร */
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* ทำให้มีเงา */
+        }
+        #chart-container {
+            width: 90%;
+            max-width: 700px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* สีพื้นหลังกราฟพร้อมโปร่งแสง */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin: 20px;
+        }
+        canvas {
+            width: 100%;
+            height: 400px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px; /* ขยายขนาดตัวอักษร */
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; /* เพิ่มเอฟเฟกต์เมื่อเลื่อนเมาส์ */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px); /* ทำให้ปุ่มยกขึ้นเมื่อเลื่อนเมาส์ */
+        }
+    </style>
+</head>
+<body>
+    <h2>การขยายตัวของพื้นที่เมืองในจังหวัดภูเก็ต</h2>
+    <div id="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <button onclick="refreshChart()">รีเฟรชกราฟ</button>
+
+    <script>
+        const years = ['2556', '2559', '2561', '2563'];
+        const areas = [26.59, 29.01, 30.04, 31.3];
+
+        function createChart() {
+            new Chart("myChart", {
+                type: "line",
+                data: {
+                    labels: years,
+                    datasets: [
+                        { label: 'การขยายตัว 2556', data: areas, borderColor: "red", fill: false },
+                        { label: 'การขยายตัว 2559', data: areas.map(area => area + 1), borderColor: "green", fill: false },
+                        { label: 'การขยายตัว 2561', data: areas.map(area => area + 2), borderColor: "blue", fill: false },
+                        { label: 'การขยายตัว 2563', data: areas.map(area => area + 3), borderColor: "orange", fill: false }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'การขยายตัวของพื้นที่เมืองในจังหวัดภูเก็ต',
+                        fontSize: 18,
+                        fontColor: '#333'
+                    },
+                    scales: {
+                        xAxes: [{
+                            title: { display: true, text: 'ปี', fontColor: '#333' },
+                            ticks: { fontColor: '#333' }
+                        }],
+                        yAxes: [{
+                            title: { display: true, text: 'พื้นที่ชุมชนและสิ่งปลูกสร้าง (ไร่)', fontColor: '#333' },
+                            gridLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                            ticks: { fontColor: '#333' }
+                        }]
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: { fontColor: '#333' }
+                    }
+                }
+            });
+        }
+
+        function refreshChart() {
+            document.getElementById("myChart").remove(); 
+            const newCanvas = document.createElement("canvas");
+            newCanvas.id = "myChart";
+            newCanvas.style.width = "100%";
+            newCanvas.style.height = "400px";
+            document.getElementById("chart-container").appendChild(newCanvas);
+            createChart();
+        }
+
+        createChart();
+    </script>
+</body>
+</html>
